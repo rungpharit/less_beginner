@@ -1,0 +1,57 @@
+@background-color:#3333;
+@font-family : Tahoma;
+@primary-color : #3B5998;
+@secondary-color : #20B2AA;
+@line-height : 1em + 1em;
+
+body{
+  background: @background-color;
+  font-family: @font-family;
+  line-height: @line-height;
+}
+
+.bordered{
+  border-top: dotted 1px #FF6961;
+  border-bottom: solid 2px #FF6961;
+}
+
+.border-radius(@radius){
+  border-radius: @radius;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  .border-radius(30px)
+}
+
+h1 , h3{
+  .bordered
+}
+
+.primary-text{
+  color: @primary-color;
+}
+
+.primary-btn:extend(.btn){
+  background: @primary-color;
+}
+
+ul#menu { 
+  list-style: none;
+  background-color: lighten(@secondary-color,50%);
+  li{
+    padding: 10px 0px;
+    a{
+      color: @secondary-color;
+      text-decoration: none;
+      &:hover{
+        color: #000000;
+      }
+    }
+  }
+}
+
+
+
+
